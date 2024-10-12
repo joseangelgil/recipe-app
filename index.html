@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  
+  <!-- Google Fonts 'Lato' -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato&family=Matemasie&display=swap" rel="stylesheet">
+
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link rel="icon" href="./img/logo.png">
+  <title>Recipe App</title>
+</head>
+<body>
+  <div id="main-container" class="main-container">    
+    <div class="search-section">   
+      <img class="logo" src="./img/logo.png" alt="logo">   
+      <div class="search-bar">
+        <input id='inputSearch' type="text" placeholder="Search by Meal or Ingredient name">
+        <i id="searchBtn" class="fa-solid fa-magnifying-glass"></i>
+      </div>
+    </div>
+    <hr>
+    <div class="favorites-section">
+      <h2>Favorites Meals</h2>
+      <div id="favoriteContainer" class="favorites-container">
+        
+      </div>
+    </div>
+    <hr>
+    <div class="random-section">
+      <h2>Meal of the day</h2>
+      <div class="random-container">
+        <div id='randomMeal' class="random-image">
+          <img src="" alt="">
+          <span class="random-image-title"><h2></h2></span>
+          <i id='randomLikeBtn' class="fa-regular fa-heart fa-2x"></i>
+        </div>
+        <hr>
+        <div class="random-ingredients">
+          <h3>Ingredients</h3>
+          <ul id="randomIngredientsList">
+
+          </ul>
+        </div>
+        <hr>
+        <div class="random-preparation">
+          <h3>Preparation</h3>
+          <p id="randomPreparationInfo"></p>
+        </div>
+      </div>
+    </div>
+    <div class="searchedList-section">
+      <hr>
+      <h2 id="searchedList-title"></h2>
+      <div id="searchedListContainer" class="searchedList-container">
+        
+      </div>      
+    </div>
+
+    <dialog id="selected-meal-dialog">
+      <button id="closeDialogBtn">close</button>
+      <div class="selected-container">
+        <div id='selectedMeal' class="selected-image">
+          <img src="./img/logo.png" alt="">
+          <span class="selected-image-title"><h2>logo</h2></span>
+          <i id='selectedLikeBtn' class="fa-regular fa-heart fa-2x"></i>
+        </div>
+        <hr class="vertical">
+        <div class="selected-ingredients">
+          <h3>Ingredients</h3>
+          <ul id="selectedIngredientsList">
+            
+          </ul>
+        </div>
+        <hr class="horizontal">
+        <div class="selected-preparation">
+          <h3>Preparation</h3>
+          <p id="selectedPreparationInfo"></p>
+        </div>
+      </div>
+    </dialog>
+  </div>  
+
+  <script src="script.js"></script>
+</body>
+</html>
