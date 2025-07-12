@@ -182,8 +182,7 @@ function updateFavorites() {
 async function getSearchResults(search) {
 
   if(search === '') {
-    alert('The input field cannot be empty. Please, enter a meal or ingredient name.')
-    searchedListSection.style.display = 'none';
+    alert('Please, introduce a meal or ingredient to search')
     return
   }
 
@@ -254,7 +253,10 @@ async function getSearchResults(search) {
   });
 }
 
-
+// Hide searched section when input is empty
+inputSearch.addEventListener('input', (e) => {
+  if(e.target.value === '') searchedListSection.style.display = 'none'
+});
 
 // SEARCH BUTTON LISTENER
 searchBtn.addEventListener('click', () => {
